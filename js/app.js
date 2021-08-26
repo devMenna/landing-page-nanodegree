@@ -24,27 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
    * Start Helper Functions
    *
    */
-  /*const checkView = (el) => {
-    let top = el.offsetTop;
-    let left = el.offsetLeft;
-    let width = el.offsetWidth;
-    let height = el.offsetHeight;
 
-    while (el.offsetParent) {
-      el = el.offsetParent;
-      top += el.offsetTop;
-      left += el.offsetLeft;
-    }
-
-    return (
-      top < window.pageYOffset + window.innerHeight &&
-      left < window.pageXOffset + window.innerWidth &&
-      top + height > window.pageYOffset &&
-      left + width > window.pageXOffset
-    );
-  };*/
-
-  function isInViewport(element) {
+  //function that checks if the current section's  in the viewPort
+  const isInViewport = (element) => {
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -53,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-  }
+  };
 
   /**
    * End Helper Functions
@@ -82,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
 
   const numOfSections = sections.length;
-
+  //loop to create list items and adding a elements to it then sets an attribute with the sections link to scroll over there by click
   for (let i = 1; i <= numOfSections; i++) {
     let a = document.createElement("a");
     let Li = document.createElement("LI");
@@ -92,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     a.classList.add("menu__link");
     document.getElementById("navbar__list").appendChild(Li);
   }
-
+  //eventListener that waits for the scroll to happen, calls the function to check if section in view , adds class therefore adding style to it
   document.addEventListener("scroll", () => {
     const navbarElements = document.querySelectorAll("li");
     sections.forEach((el, idx) => {

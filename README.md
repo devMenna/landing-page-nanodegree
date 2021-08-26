@@ -1,13 +1,16 @@
-# Landing Page Project
+# Landing page Project
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+this project's an example of a blog page
 
-## Instructions
+## installation
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+you can install the site by cloning the reparatory from this link
 
-To get started, open `js/app.js` and start building out the app's functionality
+https://github.com/DevMenna/landing-page-nanodegree.git
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+##How the Game Work
+
+when you open the website if you click any section using the navbar it scrolls directly to the selected section highlighting the background of the section in use highlighting the section's name in the navbar as well .
+scrolling down the page removes the highlight from the current section to the following one .
