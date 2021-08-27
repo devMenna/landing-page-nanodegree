@@ -6,7 +6,7 @@ this project's an example of a blog page
 
 ## installation
 
-you can install the site by cloning the reparatory from this link
+you can install the site by cloning the repository from this link
 
 https://github.com/DevMenna/landing-page-nanodegree.git
 
