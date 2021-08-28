@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //function that checks if the current section's  in the viewPort
   const isInViewport = (element) => {
     const rect = element.getBoundingClientRect();
-    console.log("element =", element);
-    console.log("rect =", rect);
     return rect.top >= 0 && rect.top < rect.height;
   };
 
